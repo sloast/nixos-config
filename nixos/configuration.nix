@@ -80,7 +80,7 @@
     gnumake
     grim
     hyprland
-    #hyprpaper
+    swaylock
     swww
     jetbrains.idea-community
     kitty
@@ -117,6 +117,17 @@
   };
 
   programs.waybar.enable = true;
+
+  services.greetd = {
+    enable = true;
+    settings = rec {
+      initial_session = {
+        command = "Hyprland";
+        user = "adaad";
+      };
+      default_session = initial_session;
+    };
+  };
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
