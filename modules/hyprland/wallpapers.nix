@@ -2,15 +2,15 @@
   systemd.timers."random-wallpaper" = {
     wantedBy = ["timers.target"];
     timerConfig = {
-      OnBootSec = "5m";
-      OnUnitActiveSec = "5m";
+      OnBootSec = "10";
+      OnUnitActiveSec = "10";
       Unit = "random-wallpaper.service";
     };
   };
 
   systemd.services."random-wallpaper" = {
     script = ''
-      swww-random.sh || true
+      /usr/bin/env bash swww-random.sh
     '';
     serviceConfig = {
       Type = "oneshot";
