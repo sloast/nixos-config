@@ -76,11 +76,13 @@
     gnumake
     hyprland
     hyprpaper
+    jetbrains.idea-community
     kitty
     neovim
     pciutils
     (python3.withPackages (ps: with ps; [python-lsp-server]))
     unzip
+    vscode
     waybar
     wget
     #wlroots
