@@ -1,4 +1,4 @@
 [
   ./hyprland/default.nix
-  ./zsh.nix
+  ./zsh/default.nix
 ]
