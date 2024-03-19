@@ -69,6 +69,7 @@
     wget
     git
     pciutils
+    hyprland
   ];
 
   services.xserver.libinput.enable = true;
