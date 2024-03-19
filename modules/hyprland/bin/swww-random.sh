@@ -4,5 +4,5 @@ wallpapers="$HOME/wallpapers"
 
 selection=$(ls $wallpapers | shuf -n 1)
 
-swww img "$selection" --transition-type any
+swww img "$wallpapers/$selection" --transition-type any
 
