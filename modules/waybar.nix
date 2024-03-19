@@ -21,10 +21,10 @@ in {
       ];
 
       module-center = [
-        "tray"
       ];
 
       modules-right = [
+        "tray"
         "mpd"
         "idle_inhibitor"
         "pulseaudio"
@@ -60,6 +60,11 @@ in {
 
       "battery#bat2" = {
         "bat" = "BAT2";
+      };
+
+      "tray" = {
+        "icon-size" = 20;
+        "spacing" = 10;
       };
     };
   };
