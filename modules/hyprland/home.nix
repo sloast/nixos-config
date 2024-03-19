@@ -1,6 +1,6 @@
 {config, ...}: {
   home.file.".config/hypr" = {
-    source = "hypr";
+    source = ./hypr;
     recursive = true;
   };
 }
