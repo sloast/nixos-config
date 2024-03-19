@@ -41,7 +41,7 @@ in {
       ];
 
       "custom/nix-logo" = {
-        format = "";
+        format = " NixOS";
         on-click = "${pkgs.wofi}/bin/wofi --show drun";
         tooltip = false;
       };
@@ -53,7 +53,7 @@ in {
           "critical" = 15;
         };
         "format" = "{icon}  {capacity}%";
-        "format-charging" = " {capacity}% ({time})";
+        "format-charging" = "  {capacity}% ({time})";
 
         "format-icons" = ["" "" "" "" ""];
       };
@@ -65,6 +65,49 @@ in {
       "tray" = {
         "icon-size" = 20;
         "spacing" = 10;
+      };
+
+      "idle_inhibitor" = {
+        "format" = "{icon}";
+        "format-icons" = ["" ""];
+      };
+
+      "cpu" = {
+        "format" = "  {usage}%";
+      };
+
+      "memory" = {
+        "format" = "🐏 {usage}%";
+      };
+
+      "temperature" = {
+        "critical-threshold" = 80;
+        "format" = "  {temp}°C";
+      };
+
+      "backlight" = {
+        "format" = "{icon}  {percentage}%";
+        "format-icons" = ["" "" "" "" "" "" "" "" ""];
+      };
+
+      "pulseaudio" = {
+        # "scroll-step": 1, // %, can be a float
+        "format" = "{volume}% {icon} {format_source}";
+        "format-bluetooth" = "{volume}% {icon} {format_source}";
+        "format-bluetooth-muted" = " {icon} {format_source}";
+        "format-muted" = " {format_source}";
+        "format-source" = "{volume}% ";
+        "format-source-muted" = "";
+        "format-icons" = {
+          "headphone" = "";
+          #"hands-free" = "";
+          #"headset" = "";
+          "phone" = "";
+          "portable" = "";
+          "car" = "";
+          "default" = ["" "" ""];
+        };
+        "on-click" = "pavucontrol";
       };
     };
 

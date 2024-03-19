@@ -278,3 +278,11 @@ label:focus {
 #scratchpad.empty {
 	background-color: transparent;
 }
+
+#custom-nix-logo {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #2d3436;
+    color: #60b0ff;
+}
+
