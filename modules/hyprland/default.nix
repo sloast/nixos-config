@@ -3,10 +3,6 @@
   pkgs,
   ...
 }: {
-  imports = [
-    ./wallpapers.nix
-  ];
-
   environment.systemPackages = with pkgs; [
     unstable.hyprland
     swaylock

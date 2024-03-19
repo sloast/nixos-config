@@ -1,11 +1,9 @@
 {config, ...}: {
-  home.file.".config/hypr" = {
-    source = ./hypr;
-    recursive = true;
+  home.file.".config/hypr/hyprland.conf" = {
+    source = ./hyprland.conf;
   };
 
-  home.file.".local/bin" = {
-    source = ./bin;
-    recursive = true;
+  home.file.".local/bin/lock.sh" = {
+    source = ./bin/lock.sh;
   };
 }
