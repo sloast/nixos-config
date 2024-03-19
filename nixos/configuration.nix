@@ -79,6 +79,7 @@
     kitty
     neovim
     pciutils
+    python3
     unzip
     waybar
     wget
