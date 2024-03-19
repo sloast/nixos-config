@@ -42,6 +42,8 @@ in {
 
       "custom/nix-logo" = {
         format = "";
+        on-click = "${pkgs.wofi}/bin/wofi --show drun";
+        tooltip = false;
       };
 
       "battery" = {
@@ -50,7 +52,7 @@ in {
           "warning" = 30;
           "critical" = 15;
         };
-        "format" = "{icon} {capacity}%";
+        "format" = "{icon}  {capacity}%";
         "format-charging" = " {capacity}% ({time})";
 
         "format-icons" = ["" "" "" "" ""];
