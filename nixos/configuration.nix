@@ -76,6 +76,7 @@
     gnumake
     hyprland
     #hyprpaper
+    swww
     jetbrains.idea-community
     kitty
     neovim
@@ -84,7 +85,6 @@
     unzip
     vscode
     waybar
-    wpaperd
     wget
     #wlroots
     #xdg-desktop-portal-gtk
