@@ -14,11 +14,18 @@
   };
 
   systemd.user.services."random-wallpaper" = {
-    script = ''
-      swww-random.sh
-    '';
     serviceConfig = {
       Type = "oneshot";
+      User = "adaad";
+      ExecStart = toString (
+        pkgs.writeShellScript "swww-random-wallpaper.sh" ''
+          wallpapers=${config.users.users.adaad.home}/wallpapers
+
+          selection=$(ls $wallpapers | shuf -n 1)
+
+          swww img "$wallpapers/$selection" -t any
+        ''
+      );
     };
   };
 }
