@@ -1,7 +1,7 @@
 #!/bin/bash
 rm /run/user/1000/swww.socket
 rm -r "$HOME/.cache/swww"
-logfile="$HOME/.config/hypr/swww-init.log"
+logfile="$HOME/.local/log/swww-init.log"
 echo "run" >> "$logfile"
 #swww query &>> $logfile
 #if [ $? -eq 1 ] ; then
