@@ -75,7 +75,7 @@
     gh
     gnumake
     hyprland
-    hyprpaper
+    #hyprpaper
     jetbrains.idea-community
     kitty
     neovim
@@ -84,6 +84,7 @@
     unzip
     vscode
     waybar
+    wpaperd
     wget
     #wlroots
     #xdg-desktop-portal-gtk
@@ -105,6 +106,11 @@
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
+    DEFAULT_BROWSER = "firefox";
+  };
+
+  xdg.mime.defaultApplications = {
+    "text/html" = "firefox";
   };
 
   services.xserver.libinput.enable = true;
