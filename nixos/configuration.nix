@@ -71,6 +71,7 @@
   environment.systemPackages = with pkgs; [
     cargo
     cava
+    unstable.vesktop
     firefox-wayland
     gcc
     git

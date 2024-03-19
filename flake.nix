@@ -4,6 +4,8 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    # unstable
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-23.05";
@@ -20,11 +22,19 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     nix-flatpak,
     ...
   } @ inputs: let
     inherit (self) outputs;
+    system = "x86_64-linux";
+    overlay-unstable = final: prev: {
+      unstable = import nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    };
   in {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
@@ -33,6 +43,12 @@
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
         modules = [
+          ({
+            config,
+            pkgs,
+            ...
+          }: {nixpkgs.overlays = [overlay-unstable];})
+
           nix-flatpak.nixosModules.nix-flatpak
 
           ./nixos/configuration.nix
