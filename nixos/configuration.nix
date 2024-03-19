@@ -90,6 +90,10 @@
     #xwayland
   ];
 
+  fonts.fonts = with pkgs; [
+    nerdfonts
+  ];
+
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
