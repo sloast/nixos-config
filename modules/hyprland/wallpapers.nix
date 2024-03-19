@@ -16,7 +16,7 @@
   systemd.user.services."random-wallpaper" = {
     serviceConfig = {
       Type = "oneshot";
-      User = "adaad";
+      #User = "adaad";
       ExecStart = toString (
         pkgs.writeShellScript "swww-random-wallpaper.sh" ''
           wallpapers=${config.users.users.adaad.home}/wallpapers
