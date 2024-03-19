@@ -97,6 +97,7 @@
     unzip
     vscode
     waybar
+    wireplumber
     wget
     #wlroots
     xdg-desktop-portal-gtk
