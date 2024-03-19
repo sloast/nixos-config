@@ -1,5 +1,10 @@
-{config, ...}: {
-  systemd.timers."random-wallpaper" = {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  systemd.user.timers."random-wallpaper" = {
     wantedBy = ["timers.target"];
     timerConfig = {
       OnBootSec = "10";
@@ -8,13 +13,12 @@
     };
   };
 
-  systemd.services."random-wallpaper" = {
+  systemd.user.services."random-wallpaper" = {
     script = ''
-      /usr/bin/env bash swww-random.sh
+      swww-random.sh
     '';
     serviceConfig = {
       Type = "oneshot";
-      User = "adaad";
     };
   };
 }
