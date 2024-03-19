@@ -1,7 +1,9 @@
 #!/bin/bash
 set -e
 pushd ~/nix-config > /dev/null
-alejandra . &>/dev/null
+tmp="tmp.log"
+alejandra . 1>/dev/null 2>"$tmp" || (cat "$tmp" && rm -f "$tmp" && false)
+rm -f "$tmp"
 git diff -U0 *.nix
 echo "nah, i'd win"
 logfile="rebuild.log"

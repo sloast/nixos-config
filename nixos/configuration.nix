@@ -72,6 +72,7 @@
     firefox-wayland
     gcc
     git
+    gh
     gnumake
     hyprland
     hyprpaper

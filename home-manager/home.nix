@@ -47,6 +47,12 @@
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
   # home.packages = with pkgs; [ steam ];
+  /*
+  home.file.hypr = {
+    source = ./hypr;
+    target = ".config/hypr";
+  };
+  */
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
