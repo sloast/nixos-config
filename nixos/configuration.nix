@@ -50,6 +50,7 @@
   services.xserver = {
     layout = "gb";
     xkbVariant = "";
+    libinput.enable = true;
   };
 
   # Configure console keymap
@@ -126,20 +127,22 @@
     "text/html" = "firefox";
   };
 
-  services.xserver.libinput.enable = true;
-  services.pipewire = {
-    enable = true;
-    audio.enable = true;
-    pulse.enable = true;
-    alsa = {
+  services = {
+    pipewire = {
       enable = true;
-      support32Bit = true;
+      audio.enable = true;
+      pulse.enable = true;
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
+      jack.enable = true;
+      wireplumber.enable = true;
     };
-    jack.enable = true;
-  };
-  services.flatpak = {
-    enable = true;
-    packages = [];
+    flatpak = {
+      enable = true;
+      packages = [];
+    };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
