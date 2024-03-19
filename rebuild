@@ -1,19 +1,32 @@
 #!/bin/bash
 set -e
 pushd "$HOME/nixos-config" > /dev/null
+
 tmp="tmp.log"
 alejandra . 1>/dev/null 2>"$tmp" || (cat "$tmp" && rm -f "$tmp" && false)
 rm -f "$tmp"
+
 git add .
-git diff -U0 *.nix
-echo "nah, i'd win"
+#git diff -U0 --cached *.nix
+git diff --cached *.nix
+
+read -p $'\e[33mwould you lose? (y/n): \e[0m' yn
+if [ $yn != "n" ]; then
+    echo $'\e[31mthe one piece is not real :('
+    exit 0
+fi
+
+echo $'\e[1m\e[96mnah, i\'d win\e[0m'
 logfile="rebuild.log"
+
 (
-set -o pipefail
-( sudo nixos-rebuild switch --flake .#nixos 2>&1 | grep -v "dirty$" | tee "$logfile" ) || ( echo "An error occurred:" && cat "$logfile" | grep --color "error" && false )
-# ( home-manager switch --flake .#adaad@nixos 2>&1 | grep -v "dirty$" | tee "$logfile" ) || ( echo "An error occurred:" && cat "$logfile" | grep --color "error" && false )
+    set -o pipefail
+    ( sudo nixos-rebuild switch --flake '.#nixos' 2>&1 | grep -v "dirty$" | tee "$logfile" ) \
+    || ( echo "An error occurred:" && cat "$logfile" | grep --color "error" && false )
 )
-gen=$(nix-env --list-generations | grep 'current' | sed 's/ *(.*//')
+
+gen=$(nix-env --list-generations | grep 'current' | sed 's/^[^0-9]*//' | sed 's/[^0-9]*$//')
 git commit -am "Generation $gen"
+
 echo "operation completed successfully :)"
 popd
