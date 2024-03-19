@@ -100,7 +100,8 @@ in {
       window#waybar {
         background-color: @bg;
         box-shadow: 0px 0px 10px 0px @border;
-        border-radius: 0 0 10px 0;
+        border-width: 0 0 10px 0;
+        border-radius: 0px;
         padding: 4px;
         margin: 0px
       }
