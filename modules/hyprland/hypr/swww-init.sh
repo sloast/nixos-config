@@ -9,5 +9,5 @@ echo "run" >> "$logfile"
 #fi
 swww init &>> "$logfile"
 echo "$?" &>> "$logfile"
-swww img "$HOME/wallpapers/wall_anime2_4K.png" --transition-type none &>> $logfile
+swww img "$HOME/wallpapers/wall_anime2_4K.png" --transition-type any &>> $logfile
 
