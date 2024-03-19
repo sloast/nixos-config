@@ -80,6 +80,7 @@
     jetbrains.idea-community
     kitty
     neovim
+    networkmanagerapplet
     pciutils
     (python3.withPackages (ps: with ps; [pynvim python-lsp-server]))
     unzip

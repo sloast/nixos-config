@@ -43,10 +43,6 @@
     username = "adaad";
     homeDirectory = "/home/adaad";
     sessionVariables = {
-      QT_SCALE_FACTOR = "2.6";
-      ELM_SCALE = "2.6";
-      GDK_SCALE = "2.6";
-      XCURSOR_SIZE = "108";
     };
   };
 
