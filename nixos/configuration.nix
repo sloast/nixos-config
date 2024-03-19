@@ -73,24 +73,26 @@
     git
     gnumake
     hyprland
-    #hyprpaper
+    hyprpaper
     kitty
     neovim
     pciutils
     unzip
     waybar
     wget
-    wlroots
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
-    xdg-utils
-    xwayland
+    #wlroots
+    #xdg-desktop-portal-gtk
+    #xdg-desktop-portal-hyprland
+    #xdg-utils
+    #xwayland
   ];
 
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
   };
+
+  programs.waybar.enable = true;
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
