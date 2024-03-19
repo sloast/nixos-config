@@ -119,6 +119,7 @@
     extraConfig = {
       color.ui = "true";
       diff.tool = "nvimdiff";
+      init.defaultbranch = "master";
     };
   };
 
