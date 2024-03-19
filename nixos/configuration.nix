@@ -81,6 +81,7 @@
     gh
     gnumake
     grim
+    htop
     jetbrains.idea-community
     kitty
     libsForQt5.kdenlive
