@@ -43,6 +43,7 @@
     username = "adaad";
     homeDirectory = "/home/adaad";
     sessionVariables = {
+      PATH = "$PATH:$HOME/.local/bin";
     };
   };
 
