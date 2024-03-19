@@ -9,6 +9,8 @@
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
+
     # TODO: Add any other flake you might need
     # hardware.url = "github:nixos/nixos-hardware";
 
@@ -19,6 +21,7 @@
     self,
     nixpkgs,
     home-manager,
+    nix-flatpak,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -29,7 +32,11 @@
       nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
-        modules = [./nixos/configuration.nix];
+        modules = [
+          nix-flatpak.nixosModules.nix-flatpak
+
+          ./nixos/configuration.nix
+        ];
       };
     };
 
