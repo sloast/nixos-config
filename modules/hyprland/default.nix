@@ -6,7 +6,7 @@
   environment.systemPackages = with pkgs; [
     unstable.hyprland
     swaylock
-    swww
+    unstable.swww
     waybar
     wlroots
     wl-clipboard
