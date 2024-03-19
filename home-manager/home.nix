@@ -56,6 +56,19 @@
   };
   */
 
+  #home.xdg.enable = true;
+  xdg.mimeApps = {
+    enable = true;
+    associations.added = {
+      "x-scheme-handler/http" = ["firefox"];
+      "x-scheme-handler/https" = ["firefox"];
+    };
+    defaultApplications = {
+      "x-scheme-handler/http" = ["firefox"];
+      "x-scheme-handler/https" = ["firefox"];
+    };
+  };
+
   # Enable home-manager and git
   programs.home-manager.enable = true;
   programs.git.enable = true;
