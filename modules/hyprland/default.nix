@@ -13,7 +13,8 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     xdg-utils
-    #xwayland
+    xwayland
+    unstable.xwaylandvideobridge
   ];
 
   programs.hyprland = {
