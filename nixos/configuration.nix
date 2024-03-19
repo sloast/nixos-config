@@ -107,10 +107,6 @@
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     DEFAULT_BROWSER = "firefox";
-    QT_SCALE_FACTOR = "2.6";
-    ELM_SCALE = "2.6";
-    GDK_SCALE = "2.6";
-    XCURSOR_SIZE = "108";
   };
 
   xdg.mime.defaultApplications = {
