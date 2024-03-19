@@ -1,0 +1,4 @@
+[
+  ./waybar.nix
+  ./kitty.nix
+]

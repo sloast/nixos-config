@@ -8,14 +8,15 @@
   ...
 }: {
   # You can import other home-manager modules here
-  imports = [
-    # If you want to use home-manager modules from other flakes (such as nix-colors):
-    # inputs.nix-colors.homeManagerModule
+  imports =
+    [
+      # If you want to use home-manager modules from other flakes (such as nix-colors):
+      # inputs.nix-colors.homeManagerModule
 
-    # You can also split up your configuration and import pieces of it here:
-    # ./nvim.nix
-    ./kitty.nix
-  ];
+      # You can also split up your configuration and import pieces of it here:
+      # ./nvim.nix
+    ]
+    ++ (import ../modules/home-default.nix);
 
   nixpkgs = {
     # You can add overlays here
@@ -47,12 +48,6 @@
       EDITOR = "nvim";
     };
   };
-
-  #  programs.waybar = {
-  #    enable = true;
-  #    #package = inputs.hyprland.packages.${pkgs.system}.waybar-hyprland;
-  #    settings.mainBar.layer = "top";
-  #  };
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
