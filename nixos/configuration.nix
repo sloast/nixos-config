@@ -81,7 +81,7 @@
     gh
     gnumake
     grim
-    btop
+    unstable.btop
     jetbrains.idea-community
     kitty
     libsForQt5.kdenlive
