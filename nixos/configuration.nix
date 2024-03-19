@@ -69,6 +69,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    cargo
     cava
     firefox-wayland
     gcc
@@ -86,6 +87,7 @@
     pciutils
     pipewire
     (python3.withPackages (ps: with ps; [pynvim python-lsp-server]))
+    rustc
     spotifyd
     unzip
     vscode
