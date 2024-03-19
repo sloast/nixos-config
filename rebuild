@@ -13,6 +13,6 @@ set -o pipefail
 # ( home-manager switch --flake .#adaad@nixos 2>&1 | grep -v "dirty$" | tee "$logfile" ) || ( echo "An error occurred:" && cat "$logfile" | grep --color "error" && false )
 )
 gen=$(nix-env --list-generations | grep 'current' | sed 's/ *(.*//')
-git commit -am "$gen"
+git commit -am "Generation $gen"
 echo "operation completed successfully :)"
 popd
