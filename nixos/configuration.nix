@@ -71,7 +71,7 @@
     git
     gnumake
     hyprland
-    hyprpaper
+    #hyprpaper
     kitty
     neovim
     pciutils
