@@ -23,7 +23,7 @@
 
           selection=$(ls $wallpapers | shuf -n 1)
 
-          swww img "$wallpapers/$selection" -t any
+          ${pkgs.unstable.swww}/bin/swww img "$wallpapers/$selection" -t any
         ''
       );
     };
