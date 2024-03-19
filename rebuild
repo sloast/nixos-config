@@ -7,7 +7,7 @@ alejandra . 1>/dev/null 2>"$tmp" || (cat "$tmp" && rm -f "$tmp" && false)
 rm -f "$tmp"
 
 git add .
-git diff -U0 HEAD #*.nix
+git diff -U0 HEAD
 #git diff --cached
 
 read -p $'\e[33mbut would you lose? (y/n): \e[0m' yn

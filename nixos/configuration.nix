@@ -77,7 +77,7 @@
     firefox-wayland
     ffmpeg
     gcc
-    git
+    #git
     gh
     gnumake
     grim
