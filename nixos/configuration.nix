@@ -80,7 +80,7 @@
     kitty
     neovim
     pciutils
-    (python3.withPackages (ps: with ps; [python-lsp-server]))
+    (python3.withPackages (ps: with ps; [pynvim python-lsp-server]))
     unzip
     vscode
     waybar
