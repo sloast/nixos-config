@@ -79,7 +79,7 @@
     kitty
     neovim
     pciutils
-    python3
+    (python3.withPackages (ps: with ps; [python-lsp-server]))
     unzip
     waybar
     wget
