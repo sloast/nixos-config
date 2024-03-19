@@ -9,6 +9,9 @@ in {
       position = "top";
       layer = "top";
 
+      height = 30;
+      spacing = 4;
+
       modules-left = [
         "custom/nix-logo"
         "hyprland/workspaces"
