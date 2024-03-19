@@ -8,7 +8,8 @@
     swaylock
     swww
     waybar
-    #wlroots
+    wlroots
+    wl-clipboard
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     xdg-utils
