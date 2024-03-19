@@ -4,7 +4,7 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    hyprland
+    unstable.hyprland
     swaylock
     swww
     waybar
