@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+pushd ~/nix-config > /dev/null
+logfile="rebuild.log"
+echo "nah, i'd win"
+( sudo nixos-rebuild switch --flake .#nixos 2>&1 | grep -v "dirty$" | tee "$logfile" ) || (echo "An error occurred:" && cat "$logfile" | grep --color "error")
+( home-manager switch --flake .#adaad@nixos 2>&1 | grep -v "dirty$" | tee "$logfile" ) || (echo "An error occurred:" && cat "$logfile" | grep --color "error")
+git commit -am 'nixos-rebuild'
+echo "operation completed successfully :)"
+popd
