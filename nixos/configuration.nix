@@ -77,6 +77,7 @@
     git
     gh
     gnumake
+    grim
     hyprland
     #hyprpaper
     swww
@@ -92,6 +93,7 @@
     (python3.withPackages (ps: with ps; [pynvim python-lsp-server]))
     rustc
     spotify
+    slurp
     unzip
     vscode
     waybar
