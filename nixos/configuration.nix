@@ -87,6 +87,7 @@
     libsForQt5.kdenlive
     neofetch
     neovim
+    neovide
     networkmanagerapplet
     nodejs
     pciutils
