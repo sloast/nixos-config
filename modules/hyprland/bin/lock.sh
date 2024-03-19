@@ -41,7 +41,30 @@ ffmpeg -i screen.jpg -vf "[in] gblur=sigma=$blur [a] ; [a] eq=saturation=1.5 [ou
 
 
 #import pywal colors
-source "$HOME/.cache/wal/colors.sh"
+#source "$HOME/.cache/wal/colors.sh"
+
+# Special
+background='#101010'
+foreground='#dedeef'
+cursor='#dedeef'
+
+# Colors
+color0='#101010'
+color1='#5D9E9E'
+color2='#0DB9CB'
+color3='#7291DF'
+color4='#C2B4BC'
+color5='#AAE3D3'
+color6='#E7E1D7'
+color7='#dedeef'
+color8='#9b9ba7'
+color9='#5D9E9E'
+color10='#0DB9CB'
+color11='#7291DF'
+color12='#C2B4BC'
+color13='#AAE3D3'
+color14='#E7E1D7'
+color15='#dedeef'
 
 swaylock \
   --image "logo-ed_screen.png" \
