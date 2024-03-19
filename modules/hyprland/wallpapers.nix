@@ -7,8 +7,8 @@
   systemd.user.timers."random-wallpaper" = {
     wantedBy = ["timers.target"];
     timerConfig = {
-      OnBootSec = "10";
-      OnUnitActiveSec = "10";
+      OnBootSec = "10m";
+      OnUnitActiveSec = "10m";
       Unit = "random-wallpaper.service";
     };
   };
