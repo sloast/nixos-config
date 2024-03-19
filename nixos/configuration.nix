@@ -81,6 +81,7 @@
     swww
     jetbrains.idea-community
     kitty
+    libsForQt5.kdenlive
     neofetch
     neovim
     networkmanagerapplet
