@@ -89,8 +89,9 @@ in {
       @define-color maroon #EBA0AC;
 
       * {
-        margin: 1px;
-        padding: 5px;
+        margin: 0px;
+        padding-left: 5px;
+        padding-right: 5px;
         border-radius: 5px;
         font-family: "FiraCode NerdFont", "SF Pro", "JetBrainsMono Nerd Font";
         font-size: 13pt;
@@ -98,10 +99,10 @@ in {
 
       window#waybar {
         background-color: @bg;
-        border: 1px solid @border;
         box-shadow: 0px 0px 10px 0px @border;
         border-radius: 0px;
-        padding: 3px;
+        padding: 4px;
+        margin: 0px
       }
     '';
   };
