@@ -66,24 +66,24 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    git
-    pciutils
-    hyprland
-    xwayland
-    waybar
-    wlroots
-    wget
-    unzip
-    xdg-utils
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
     firefox-wayland
     gcc
+    git
     gnumake
+    hyprland
     hyprpaper
     kitty
+    neovim
+    pciutils
+    seatd
+    unzip
+    waybar
+    wget
+    wlroots
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
+    xdg-utils
+    xwayland
   ];
 
   services.xserver.libinput.enable = true;
