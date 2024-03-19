@@ -89,9 +89,9 @@
     waybar
     wget
     #wlroots
-    #xdg-desktop-portal-gtk
-    #xdg-desktop-portal-hyprland
-    #xdg-utils
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
+    xdg-utils
     #xwayland
   ];
 
