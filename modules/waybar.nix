@@ -101,6 +101,7 @@ in {
         background-color: @bg;
         box-shadow: 0px 0px 10px 0px @border;
         border-radius: 0px;
+        border: 0px;
         padding: 4px;
         margin: 0px
       }
