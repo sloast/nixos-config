@@ -58,6 +58,13 @@
   };
   */
 
+  programs.neovim = {
+    enable = true;
+    plugins = with pkgs.vimPlugins; [
+      vim-lsp
+    ];
+  };
+
   #home.xdg.enable = true;
   xdg.mimeApps = {
     enable = true;
