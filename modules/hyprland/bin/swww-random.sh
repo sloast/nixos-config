@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 wallpapers="$HOME/wallpapers"
 
