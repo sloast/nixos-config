@@ -99,6 +99,8 @@
     vscode
     wireplumber
     wget
+
+    nodePackages.vim-language-server
   ];
 
   fonts.fonts = with pkgs; [
