@@ -94,13 +94,13 @@ in {
         padding-right: 5px;
         border-radius: 5px;
         font-family: "FiraCode NerdFont", "SF Pro", "JetBrainsMono Nerd Font";
-        font-size: 13pt;
+        font-size: 11pt;
       }
 
       window#waybar {
         background-color: @bg;
         box-shadow: 0px 0px 10px 0px @border;
-        border-radius: 0px;
+        border-radius: 0 0 10px 0;
         border: 0px;
         padding: 4px;
         margin: 0px
