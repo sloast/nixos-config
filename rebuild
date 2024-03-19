@@ -12,6 +12,7 @@ set -o pipefail
 ( sudo nixos-rebuild switch --flake .#nixos 2>&1 | grep -v "dirty$" | tee "$logfile" ) || ( echo "An error occurred:" && cat "$logfile" | grep --color "error" && false )
 # ( home-manager switch --flake .#adaad@nixos 2>&1 | grep -v "dirty$" | tee "$logfile" ) || ( echo "An error occurred:" && cat "$logfile" | grep --color "error" && false )
 )
-git commit -am 'nixos-rebuild'
+gen=$(nix-env --list-generations | grep 'current' | sed 's/ *(.*//')
+git commit -am "$gen"
 echo "operation completed successfully :)"
 popd
