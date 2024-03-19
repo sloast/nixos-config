@@ -10,7 +10,7 @@ git add .
 #git diff -U0 --cached *.nix
 git diff --cached *.nix
 
-read -p $'\e[33mwould you lose? (y/n): \e[0m' yn
+read -p $'\e[33mbut would you lose? (y/n): \e[0m' yn
 if [ $yn != "n" ]; then
     echo $'\e[31mthe one piece is not real :('
     exit 0
