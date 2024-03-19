@@ -74,6 +74,7 @@
     cava
     unstable.vesktop
     firefox-wayland
+    ffmpeg
     gcc
     git
     gh
@@ -127,7 +128,7 @@
     enable = true;
     settings = rec {
       initial_session = {
-        command = "Hyprland";
+        command = "Hyprland && swaylock";
         user = "adaad";
       };
       default_session = initial_session;
