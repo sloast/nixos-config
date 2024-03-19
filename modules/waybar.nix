@@ -44,6 +44,18 @@ in {
         format = "";
       };
 
+      "battery" = {
+        "states" = {
+          "good" = 50;
+          "warning" = 30;
+          "critical" = 15;
+        };
+        "format" = "{icon} {capacity}%";
+        "format-charging" = " {capacity}% ({time})";
+
+        "format-icons" = ["" "" "" "" ""];
+      };
+
       "battery#bat2" = {
         "bat" = "BAT2";
       };
