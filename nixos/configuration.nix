@@ -79,6 +79,7 @@
     swww
     jetbrains.idea-community
     kitty
+    neofetch
     neovim
     networkmanagerapplet
     pciutils
