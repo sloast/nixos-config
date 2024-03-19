@@ -48,11 +48,11 @@
     };
   };
 
-  programs.waybar = {
-    enable = true;
-    #package = inputs.hyprland.packages.${pkgs.system}.waybar-hyprland;
-    settings.mainBar.layer = "top";
-  };
+  #  programs.waybar = {
+  #    enable = true;
+  #    #package = inputs.hyprland.packages.${pkgs.system}.waybar-hyprland;
+  #    settings.mainBar.layer = "top";
+  #  };
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
