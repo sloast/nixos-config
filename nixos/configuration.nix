@@ -88,7 +88,7 @@
     pipewire
     (python3.withPackages (ps: with ps; [pynvim python-lsp-server]))
     rustc
-    spotifyd
+    spotify
     unzip
     vscode
     waybar
