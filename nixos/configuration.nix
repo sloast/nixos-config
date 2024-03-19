@@ -118,6 +118,11 @@
 
   programs.waybar.enable = true;
 
+  # swaylock
+  # https://discourse.nixos.org/t/swaylock-wont-unlock/27275
+  security.pam.services.swaylock = {};
+  security.pam.services.swaylock.fprintAuth = false;
+
   services.greetd = {
     enable = true;
     settings = rec {
