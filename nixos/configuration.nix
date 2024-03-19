@@ -84,6 +84,7 @@
     neovim
     networkmanagerapplet
     pciutils
+    pipewire
     (python3.withPackages (ps: with ps; [pynvim python-lsp-server]))
     unzip
     vscode
@@ -117,6 +118,16 @@
   };
 
   services.xserver.libinput.enable = true;
+  services.pipewire = {
+    enable = true;
+    audio.enable = true;
+    pulse.enable = true;
+    alsa = {
+      enable = true;
+      support32Bit = true;
+    };
+    jack.enable = true;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
