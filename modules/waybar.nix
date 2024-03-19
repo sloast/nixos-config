@@ -99,11 +99,18 @@ in {
 
       window#waybar {
         background-color: @bg;
-        box-shadow: 0px 0px 10px 0px @border;
+        box-shadow: 0 0 10px 0 @border;
         border-width: 0 0 2px 0;
-        border-radius: 0px;
-        padding: 0px;
-        margin: 0px
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+      }
+
+      tooltip {
+        background: @bg;
+        border-radius: 5px;
+        padding: 0;
+        margin: 0;
       }
     '';
   };
