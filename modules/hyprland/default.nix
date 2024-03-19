@@ -35,7 +35,7 @@
     enable = true;
     settings = rec {
       initial_session = {
-        command = "Hyprland ; swaylock";
+        command = "Hyprland";
         user = "adaad";
       };
       default_session = initial_session;
