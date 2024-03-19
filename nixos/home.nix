@@ -106,7 +106,21 @@
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
-  programs.git.enable = true;
+  programs.git = {
+    package = pkgs.gitAndTools.gitFull;
+    enable = true;
+    userName = "sloast";
+    userEmail = "adaadrobson@gmail.com";
+
+    aliases = {
+      amend = "commit --amend";
+    };
+
+    extraConfig = {
+      color.ui = "true";
+      diff.tool = "nvimdiff";
+    };
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

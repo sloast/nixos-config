@@ -1,4 +1,9 @@
 {pkgs, ...}: {
+  home.file.".config/zsh_custom" = {
+    source = ./zsh_custom;
+    recursive = true;
+  };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -10,8 +15,10 @@
     };
 
     oh-my-zsh = {
+      custom = "$HOME/.config/zsh_custom";
+
       enable = true;
-      theme = "robbyrussell";
+      theme = "betterussell";
       plugins = [
         "git"
         "npm"

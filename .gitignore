@@ -1,3 +1,5 @@
+!.gitignore
 rebuild.log
 ignore
 *.bak
+.*
