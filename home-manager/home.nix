@@ -44,6 +44,7 @@
     homeDirectory = "/home/adaad";
     sessionVariables = {
       PATH = "$PATH:$HOME/.local/bin";
+      EDITOR = "nvim";
     };
   };
 

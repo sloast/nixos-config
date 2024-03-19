@@ -91,6 +91,7 @@
     pciutils
     pipewire
     (python3.withPackages (ps: with ps; [pynvim python-lsp-server]))
+    ripgrep
     rustc
     spotify
     slurp

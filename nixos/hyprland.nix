@@ -20,7 +20,9 @@
     xwayland.enable = true;
   };
 
-  programs.waybar.enable = true;
+  programs.waybar = {
+    enable = true;
+  };
 
   # swaylock
   # https://discourse.nixos.org/t/swaylock-wont-unlock/27275
