@@ -51,7 +51,7 @@
 
           nix-flatpak.nixosModules.nix-flatpak
 
-          ./nixos/configuration.nix
+          ./nixos
         ];
       };
     };

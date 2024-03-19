@@ -48,6 +48,15 @@
     };
   };
 
+  programs.waybar = {
+    enable = true;
+    #package = inputs.hyprland.packages.${pkgs.system}.waybar-hyprland;
+    settings.mainBar = {
+      position = "top";
+      layer = "top";
+    };
+  };
+
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
   # home.packages = with pkgs; [ steam ];

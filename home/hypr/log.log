@@ -1,0 +1,31 @@
+run
+Error: "Failed to connect to socket: Connection refused (os error 111)"
+WARNING: socket file /run/user/1000/swww.socket was not deleted when the previous daemon exited
+Error: "Failed to receive answer: io error: Connection reset by peer (os error 104)"
+1
+Error: "Failed to connect to socket: Connection refused (os error 111)"
+run
+Error: "Socket file not found. Are you sure swww-daemon is running?"
+Error: "Failed to receive answer: io error: Connection reset by peer (os error 104)"
+1
+Error: "Failed to connect to socket: Connection refused (os error 111)"
+run
+Error: "Failed to connect to socket: Connection refused (os error 111)"
+WARNING: socket file /run/user/1000/swww.socket was not deleted when the previous daemon exited
+Error: "Failed to receive answer: io error: Connection reset by peer (os error 104)"
+1
+Error: "Failed to connect to socket: Connection refused (os error 111)"
+run
+0
+Error: "Failed to serialize request: io error: Connection reset by peer (os error 104)"
+run
+WARNING: socket file /run/user/1000/swww.socket was not deleted when the previous daemon exited
+0
+Error: "Output and image have different sizes: 34723392 vs 8680848.This should be impossible.Please get in the contact with the developers"
+run
+0
+Error: "Failed to serialize request: io error: Connection reset by peer (os error 104)"
+run
+0
+run
+0

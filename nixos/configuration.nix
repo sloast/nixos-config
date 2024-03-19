@@ -6,12 +6,12 @@
   pkgs,
   ...
 }: {
-  imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ./hyprland.nix
-    ./home-manager-import.nix
-  ];
+  imports =
+    [
+      # Include the results of the hardware scan.
+      ./hardware-configuration.nix
+    ]
+    ++ (import ../modules/nix-default.nix);
 
   nix.settings.experimental-features = "nix-command flakes";
 

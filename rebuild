@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-pushd ~/nix-config > /dev/null
+pushd "$HOME/nixos-config" > /dev/null
 tmp="tmp.log"
 alejandra . 1>/dev/null 2>"$tmp" || (cat "$tmp" && rm -f "$tmp" && false)
 rm -f "$tmp"
