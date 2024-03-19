@@ -92,7 +92,11 @@
     nodejs
     pciutils
     pipewire
-    (python3.withPackages (ps: with ps; [pynvim python-lsp-server]))
+    (python3.withPackages (ps:
+      with ps; [
+        pynvim
+        python-lsp-server
+      ]))
     #pywal
     ripgrep
     rustc
@@ -114,6 +118,8 @@
     NIXOS_OZONE_WL = "1";
     DEFAULT_BROWSER = "firefox";
   };
+
+  environment.localBinInPath = true;
 
   xdg.mime.defaultApplications = {
     "text/html" = "firefox";

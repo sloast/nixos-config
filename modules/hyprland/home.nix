@@ -3,4 +3,9 @@
     source = ./hypr;
     recursive = true;
   };
+
+  home.file.".local/bin" = {
+    source = ./bin;
+    recursive = true;
+  };
 }
