@@ -8,6 +8,7 @@
     swaylock
     unstable.swww
     waybar
+    wofi
     wlroots
     wl-clipboard
     xdg-desktop-portal-gtk
