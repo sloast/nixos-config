@@ -46,6 +46,10 @@ in {
         tooltip = false;
       };
 
+      "hyprland/language" = {
+        format = "🇬🇧";
+      };
+
       "battery" = {
         states = {
           good = 50;
@@ -73,6 +77,7 @@ in {
           deactivated = " ";
           activated = " ";
         };
+        tooltip = false;
       };
 
       "cpu" = {
