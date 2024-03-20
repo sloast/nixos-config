@@ -47,70 +47,70 @@ in {
       };
 
       "battery" = {
-        "states" = {
-          "good" = 50;
-          "warning" = 30;
-          "critical" = 15;
+        states = {
+          good = 50;
+          warning = 30;
+          critical = 15;
         };
-        "format" = "{icon} {capacity}%";
-        "format-charging" = "  {capacity}% ({time})";
+        format = "{icon} {capacity}%";
+        format-charging = "  {capacity}% ({time})";
 
-        "format-icons" = [" " " " " " " " " "];
+        format-icons = [" " " " " " " " " "];
       };
 
       "battery#bat2" = {
-        "bat" = "BAT2";
+        bat = "BAT2";
       };
 
       "tray" = {
-        "icon-size" = 20;
-        "spacing" = 10;
+        icon-size = 20;
+        spacing = 10;
       };
 
       "idle_inhibitor" = {
-        "format" = "{icon}";
-        "format-icons" = {
-          "deactivated" = " ";
-          "activated" = " ";
+        format = "{icon}";
+        format-icons = {
+          deactivated = " ";
+          activated = " ";
         };
       };
 
       "cpu" = {
-        "format" = "  {usage}%";
+        format = "  {usage}%";
       };
 
       "memory" = {
-        "format" = "🐏 {}%";
+        format = "🐏 {}%";
       };
 
       "temperature" = {
-        "critical-threshold" = 80;
-        "format" = "  {temperatureC}°C";
+        critical-threshold = 80;
+        format = "  {temperatureC}°C";
       };
 
       "backlight" = {
-        "format" = "{icon}  {percent}%";
-        "format-icons" = ["" "" "" "" "" "" "" "" ""];
+        format = "{icon}  {percent}%";
+        format-icons = ["" "" "" "" "" "" "" "" ""];
       };
 
       "pulseaudio" = {
         # "scroll-step": 1, // %, can be a float
-        "format" = "{volume}% {icon} {format_source}";
-        "format-bluetooth" = "{volume}% {icon} {format_source}";
-        "format-bluetooth-muted" = " {icon} {format_source}";
-        "format-muted" = " {format_source}";
-        "format-source" = ""; # "{volume}% ";
-        "format-source-muted" = "";
-        "format-icons" = {
-          "headphone" = "";
-          #"hands-free" = "";
-          #"headset" = "";
-          "phone" = "";
-          "portable" = "";
-          "car" = "";
-          "default" = ["" "" ""];
+        format = "{volume}% {icon} {format_source}";
+        format-bluetooth = "{volume}% {icon} {format_source}";
+        format-bluetooth-muted = " {icon} {format_source}";
+        format-muted = " {format_source}";
+        format-source = ""; # "{volume}% ";
+        format-source-muted = "";
+        format-icons = {
+          headphone = "";
+          #hands-free = "";
+          #headset = "";
+          phone = "";
+          portable = "";
+          car = "";
+          default = ["" "" ""];
         };
-        "on-click" = "pavucontrol";
+        on-click = "pavucontrol";
       };
     };
 
