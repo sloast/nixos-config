@@ -61,8 +61,13 @@
   users.users.adaad = {
     isNormalUser = true;
     description = "Adam Robson";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "video"];
     packages = with pkgs; [];
+  };
+
+  # remove sudo prompt
+  security.sudo = {
+    wheelNeedsPassword = false;
   };
 
   # Allow unfree packages

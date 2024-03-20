@@ -4,6 +4,7 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
+    brillo
     unstable.hyprland
     swaylock
     unstable.swww
@@ -42,4 +43,10 @@
       default_session = initial_session;
     };
   };
+
+  # brillo
+  #services.udev.extraRules = ''
+  #  RUN+="chgrp video /sys/class/backlight/intel_backlight/brightness"
+  #  RUN+="chmod g+w /sys/class/backlight/intel_backlight/brightness"
+  #'';
 }
