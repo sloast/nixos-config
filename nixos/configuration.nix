@@ -110,6 +110,7 @@
     spotify
     slurp
     unzip
+    viu
     vscode
     wireplumber
     wget
