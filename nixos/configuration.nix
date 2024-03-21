@@ -96,6 +96,7 @@
     #neovide
     networkmanagerapplet
     nodejs
+    openjdk
     pciutils
     pipewire
     (python3.withPackages (ps:
