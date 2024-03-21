@@ -2,7 +2,12 @@
 
 wallpapers="$HOME/wallpapers"
 
-selection=$(ls $wallpapers | shuf -n 1)
+if [ ! -d $wallpapers ]; then
+    echo "No wallpapers directory found at $wallpapers"
+    exit 1
+fi
 
-swww img "$wallpapers/$selection" --transition-type any
+selection=$(find "$wallpapers" -not -path "*/.bak/*" -type f | shuf -n 1)
+
+swww img "$selection" --transition-type any
 

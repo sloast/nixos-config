@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+imgpath=$(curwal)
+
+if [[ $imgpath == /nix/store/* ]]; then
+    echo "Cannot remove wallpapers from the nix store."
+    exit 1
+fi
+
+wallpaperdir="$HOME/wallpapers"
+pushd "$wallpaperdir" > /dev/null
+
+relativepath=$(realpath -s --relative-to="$wallpaperdir" "$imgpath")
+
+newpath="$wallpaperdir/.bak/$relativepath"
+
+mkdir -p "$(dirname "$newpath")"
+mv "$imgpath" "$newpath"
+
+echo "Removed $(basename $imgpath) from rotation."
+

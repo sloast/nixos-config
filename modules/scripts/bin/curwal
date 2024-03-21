@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-swww query | sed 's/.*image: \(.*\)/\1/'
+swww query | sed 's/^.*image: //'
 
