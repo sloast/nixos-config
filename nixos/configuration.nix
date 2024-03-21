@@ -103,6 +103,7 @@
       with ps; [
         pynvim
         python-lsp-server
+        pywal
       ]))
     #pywal
     ripgrep
