@@ -6,5 +6,5 @@
 - setup zsh
 - fix kitty colors
 - setup noti
-- setup autosleep
+- setup swayidle
 

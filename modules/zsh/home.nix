@@ -22,6 +22,7 @@
       less = "less -FR";
       tp = "trash-put";
       tl = "trash-list";
+      nixdev = "nix develop -c $SHELL";
     };
 
     oh-my-zsh = {
