@@ -2,13 +2,12 @@
 set -e
 pushd "$HOME/nixos-config" > /dev/null
 
-tmp="tmp.log"
+tmp=$(mktemp)
 alejandra . 1>/dev/null 2>"$tmp" || (cat "$tmp" && rm -f "$tmp" && false)
 rm -f "$tmp"
 
 git add .
 git diff -U0 HEAD
-#git diff --cached
 
 read -p $'\e[33mbut would you lose? (y/n): \e[0m' yn
 if [ $yn != "n" ]; then
@@ -17,16 +16,15 @@ if [ $yn != "n" ]; then
 fi
 
 echo $'\e[1m\e[96mnah, i\'d win\e[0m'
-logfile="rebuild.log"
+#logfile="rebuild.log"
 
 (
     set -o pipefail
-    ( sudo nixos-rebuild switch --flake '.#nixos' 2>&1 | grep -v "dirty$" | tee "$logfile" ) \
-    || ( echo "An error occurred:" && cat "$logfile" | grep --color "error" && false )
+    sudo nixos-rebuild switch --flake '.#nixos' --impure | nom
 )
 
 gen=$(nix-env --list-generations | grep 'current' | sed 's/^[^0-9]*//' | sed 's/[^0-9]*$//')
-git commit -am "Generation $gen"
+git commit -am "Generation $gen" > /dev/null
 
 echo "operation completed successfully :)"
 popd

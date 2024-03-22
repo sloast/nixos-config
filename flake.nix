@@ -13,7 +13,6 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
-    # TODO: Add any other flake you might need
     # hardware.url = "github:nixos/nixos-hardware";
 
     # nix-colors.url = "github:misterio77/nix-colors";

@@ -15,6 +15,9 @@
     ++ (import ../modules/nix-default.nix);
 
   nix.settings.experimental-features = "nix-command flakes";
+  nix.extraOptions = ''
+    warn-dirty = false
+  '';
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

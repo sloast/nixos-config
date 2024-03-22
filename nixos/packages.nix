@@ -25,10 +25,11 @@
     # currently unused
     noti
     ripgrep-all
-    eza
+    #eza
     nnn
     sd
     z-lua
+    #blesh
     #byobu # why not use wm?
 
     # shell
@@ -37,6 +38,7 @@
     # neovim
     neovim
     nodePackages.vim-language-server
+    universal-ctags
     #neovide
 
     # Development
@@ -70,6 +72,7 @@
     pciutils
     cava
     ffmpeg
+    nix-output-monitor
 
     # python
     (python3.withPackages (ps:

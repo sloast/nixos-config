@@ -9,8 +9,11 @@
   ...
 }: {
   imports = [
+    <nixos-hardware/framework/13-inch/12th-gen-intel>
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
+
+  services.fwupd.enable = true;
 
   boot.initrd.availableKernelModules = ["xhci_pci" "thunderbolt" "nvme"];
   boot.initrd.kernelModules = [];
