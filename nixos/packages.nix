@@ -31,6 +31,8 @@
     z-lua
     #blesh
     #byobu # why not use wm?
+    #delta
+    #du-dust
 
     # shell
     zsh

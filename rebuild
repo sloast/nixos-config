@@ -20,7 +20,7 @@ echo $'\e[1m\e[96mnah, i\'d win\e[0m'
 
 (
     set -o pipefail
-    sudo nixos-rebuild switch --flake '.#nixos' --impure | nom
+    sudo nixos-rebuild switch --flake '.#nixos' --impure --log-format internal-json -v |& nom --json
 )
 
 gen=$(nix-env --list-generations | grep 'current' | sed 's/^[^0-9]*//' | sed 's/[^0-9]*$//')

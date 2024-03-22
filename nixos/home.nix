@@ -116,6 +116,7 @@
       color.ui = "true";
       diff.tool = "nvimdiff";
       init.defaultbranch = "master";
+      core.pager = "less -iXFR";
     };
   };
 
