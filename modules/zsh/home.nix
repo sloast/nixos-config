@@ -19,6 +19,7 @@
       cleanup = "sudo nix-collect-garbage -d";
       rebuild = "~/nixos-config/rebuild";
       ":q" = "exit";
+      less = "less -FR";
     };
 
     oh-my-zsh = {
