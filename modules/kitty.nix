@@ -10,6 +10,5 @@
       name = "FiraCodeNerdFont";
       size = 14;
     };
-    shellIntegration.enableZshIntegration = true;
   };
 }

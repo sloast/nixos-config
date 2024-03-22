@@ -25,14 +25,14 @@
     # currently unused
     noti
     ripgrep-all
-    #eza
+    eza
     nnn
     sd
     z-lua
     #blesh
     #byobu # why not use wm?
-    #delta
-    #du-dust
+    delta
+    du-dust
 
     # shell
     zsh
@@ -41,7 +41,7 @@
     neovim
     nodePackages.vim-language-server
     universal-ctags
-    #neovide
+    unstable.neovide
 
     # Development
     gcc

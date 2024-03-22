@@ -37,4 +37,7 @@
       ];
     };
   };
+
+  programs.fzf.enableZshIntegration = true;
+  programs.kitty.shellIntegration.enableZshIntegration = true;
 }
