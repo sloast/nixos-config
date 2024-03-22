@@ -1,40 +1,38 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    # Essentials
+    # essentials
     git
     gh
     vim
-    tmux
+    #tmux
     tree
     unzip
     curl
     wget
 
-    # grep
+    # improved tools
     ripgrep
-
-    # ls
-    eza
-
-    # find
     fd
     fzf
-
-    # cat
+    lsd
+    ncdu
     bat
     mdcat
-
-    # man
+    jq
+    unstable.btop
     tldr
 
-    # sh
+    # currently unused
+    noti
+    ripgrep-all
+    eza
+    nnn
+    sd
+    z-lua
+    #byobu # why not use wm?
+
+    # shell
     zsh
-
-    # top
-    unstable.btop
-
-    # other utils
-    ncdu
 
     # neovim
     neovim
@@ -44,16 +42,9 @@
     # Development
     gcc
     gnumake
-
-    # rust
-    rustup
-
-    # java
-    openjdk
-    jetbrains.idea-community
-
-    # node
     nodejs
+    rustup
+    openjdk
 
     # desktop apps
     kitty
@@ -62,6 +53,7 @@
     firefox-wayland
     libsForQt5.kdenlive
     vscode
+    jetbrains.idea-community
     #spotify
 
     # audio

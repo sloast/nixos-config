@@ -8,10 +8,16 @@
     enable = true;
     enableCompletion = true;
     enableAutosuggestions = true;
+    syntaxHighlighting.enable = true;
 
     shellAliases = {
-      ll = "ls -lhN";
-      l = "ls -AlhN";
+      ls = "lsd";
+      ll = "lsd -l";
+      l = "lsd -Al";
+      ncat = "nvim -R";
+      cls = "clear";
+      cleanup = "sudo nix-collect-garbage -d";
+      rebuild = "~/nixos-config/rebuild";
     };
 
     oh-my-zsh = {
