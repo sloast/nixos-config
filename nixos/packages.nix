@@ -38,7 +38,6 @@
 
     # neovim
     neovim
-    python3Packages.python-lsp-server
     nodePackages.vim-language-server
     #neovide
 
