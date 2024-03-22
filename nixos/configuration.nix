@@ -10,6 +10,7 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./packages.nix
     ]
     ++ (import ../modules/nix-default.nix);
 
@@ -76,50 +77,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    burpsuite
-    cargo
-    cava
-    unstable.vesktop
-    firefox-wayland
-    ffmpeg
-    gcc
     git
     gh
-    gnumake
-    grim
-    unstable.btop
-    jetbrains.idea-community
-    kitty
-    libsForQt5.kdenlive
-    neofetch
-    neovim
-    #neovide
-    networkmanagerapplet
-    nodejs
-    openjdk
-    pciutils
-    pipewire
-    (python3.withPackages (ps:
-      with ps; [
-        pynvim
-        python-lsp-server
-        pywal
-      ]))
-    #pywal
-    ripgrep
-    rustc
-    spotify
-    slurp
-    unzip
-    viu
-    vscode
-    wireplumber
-    wget
-
-    nodePackages.vim-language-server
+    vim
   ];
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     nerdfonts
   ];
 
