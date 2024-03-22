@@ -38,7 +38,6 @@
 
     # neovim
     neovim
-    python3Packages.pynvim
     python3Packages.python-lsp-server
     nodePackages.vim-language-server
     #neovide
@@ -84,6 +83,9 @@
     # python
     (python3.withPackages (ps:
       with ps; [
+        pynvim
+        python-lsp-server
+
         pywal
         virtualenv
         black
