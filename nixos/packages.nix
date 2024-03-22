@@ -21,6 +21,7 @@
     jq
     unstable.btop
     tldr
+    trash-cli
 
     # currently unused
     noti

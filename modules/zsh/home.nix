@@ -20,6 +20,8 @@
       rebuild = "~/nixos-config/rebuild";
       ":q" = "exit";
       less = "less -FR";
+      tp = "trash-put";
+      tl = "trash-list";
     };
 
     oh-my-zsh = {
