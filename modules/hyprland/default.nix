@@ -41,6 +41,7 @@
       settings = {
       };
     };
+    defaultSession = "hyprland";
   };
 
   #  services.greetd = {
