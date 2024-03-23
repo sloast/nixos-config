@@ -58,7 +58,7 @@
     firefox-wayland
     libsForQt5.kdenlive
     vscode
-    unstable.jetbrains.idea-community
+    #jetbrains.idea-community
     #spotify
 
     # audio
