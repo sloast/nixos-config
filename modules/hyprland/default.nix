@@ -33,16 +33,26 @@
   security.pam.services.swaylock = {};
   security.pam.services.swaylock.fprintAuth = false;
 
-  services.greetd = {
-    enable = true;
-    settings = rec {
-      initial_session = {
-        command = "Hyprland";
-        user = "adaad";
+  services.xserver.enable = true;
+  services.xserver.displayManager = {
+    sddm = {
+      enable = true;
+      #wayland.enable = true;
+      settings = {
       };
-      default_session = initial_session;
     };
   };
+
+  #  services.greetd = {
+  #    enable = true;
+  #    settings = rec {
+  #      initial_session = {
+  #        command = "Hyprland";
+  #        user = "adaad";
+  #      };
+  #      default_session = initial_session;
+  #    };
+  #  };
 
   # brillo
   #services.udev.extraRules = ''
