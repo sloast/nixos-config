@@ -37,6 +37,14 @@
     delta
     du-dust
 
+    # terminals (for testing)
+    alacritty
+    st
+    termite
+    wezterm
+    #warp-terminal
+    foot
+
     # shell
     zsh
 
