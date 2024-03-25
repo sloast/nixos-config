@@ -70,6 +70,7 @@
     #jetbrains.idea-community
     #spotify
     imv
+    unstable.obsidian
 
     # audio
     pipewire

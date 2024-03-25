@@ -4,7 +4,7 @@
     server.enable = true;
     settings = {
       main = {
-        font = "FiraCode Nerd Font:size=14";
+        font = "FiraCode Nerd Font:size=10";
         dpi-aware = "yes";
       };
 
