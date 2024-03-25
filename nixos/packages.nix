@@ -4,7 +4,7 @@
     git
     gh
     vim
-    #tmux
+    tmux
     tree
     unzip
     curl
@@ -27,7 +27,8 @@
     noti
     ripgrep-all
     eza
-    nnn
+    #nnn
+    ranger
     sd
     z-lua
     #blesh
@@ -60,6 +61,7 @@
     vscode
     #jetbrains.idea-community
     #spotify
+    imv
 
     # audio
     pipewire
