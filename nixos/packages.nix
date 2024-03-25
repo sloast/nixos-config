@@ -72,6 +72,7 @@
     slurp
 
     # other
+    w3m
     viu
     networkmanagerapplet
     pciutils
