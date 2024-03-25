@@ -5,28 +5,40 @@
 }: {
   environment.systemPackages = with pkgs; [
     brillo
+    # hyprland
     unstable.hyprland
+
+    # lockscreen
     swaylock
+
+    # wallpapers
     unstable.swww
+
+    # status bar
     waybar
-    #wofi
-    rofi-wayland-unwrapped
-    wlroots
+
+    # clipboard support
     wl-clipboard
+
+    # backend
+    wlroots
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     xdg-utils
     xwayland
+
+    # screen sharing (doesn't work yet)
     unstable.xwaylandvideobridge
+
+    # drun menu
+    #wofi
+    rofi-wayland-unwrapped
+    fuzzel
   ];
 
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
-  };
-
-  programs.waybar = {
-    enable = true;
   };
 
   # swaylock
