@@ -9,7 +9,8 @@
     swaylock
     unstable.swww
     waybar
-    wofi
+    #wofi
+    rofi-wayland-unwrapped
     wlroots
     wl-clipboard
     xdg-desktop-portal-gtk
