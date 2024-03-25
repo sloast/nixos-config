@@ -71,6 +71,7 @@
     #spotify
     imv
     unstable.obsidian
+    gparted
 
     # audio
     pipewire
