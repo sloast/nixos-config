@@ -23,12 +23,13 @@
     tldr
     trash-cli
 
+    ueberzug
+
     # currently unused
     noti
     ripgrep-all
     eza
     #nnn
-    ranger
     sd
     z-lua
     #blesh
@@ -53,7 +54,6 @@
     openjdk
 
     # desktop apps
-    kitty
     burpsuite
     unstable.vesktop
     firefox-wayland
@@ -72,7 +72,6 @@
     slurp
 
     # other
-    w3m
     viu
     networkmanagerapplet
     pciutils
@@ -93,5 +92,22 @@
         pylint
         pytest
       ]))
+
+    (ranger.overrideAttrs
+      (r: {
+        preConfigure =
+          r.preConfigure
+          + ''
+            # Specify path to Überzug
+            substituteInPlace ranger/ext/img_display.py \
+              --replace "Popen(['ueberzug'" \
+                        "Popen(['${pkgs.ueberzug}/bin/ueberzug'"
+
+            # Use Überzug as the default method
+            substituteInPlace ranger/config/rc.conf \
+              --replace 'set preview_images_method w3m' \
+                        'set preview_images_method kitty'
+          '';
+      }))
   ];
 }
