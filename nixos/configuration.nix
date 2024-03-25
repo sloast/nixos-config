@@ -115,7 +115,7 @@
       wireplumber.enable = true;
     };
     flatpak = {
-      enable = true;
+      enable = false;
       packages = [];
     };
   };
