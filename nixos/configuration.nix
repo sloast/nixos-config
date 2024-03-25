@@ -77,7 +77,12 @@
   };
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    permittedInsecurePackages = [
+      "electron-19.1.9"
+    ];
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
