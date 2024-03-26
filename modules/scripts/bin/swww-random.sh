@@ -7,7 +7,7 @@ if [ ! -d $wallpapers ]; then
     exit 1
 fi
 
-selection=$(find "$wallpapers" -not -path "*/.bak/*" -type f | shuf -n 1)
+selection=$(find "$wallpapers" -not -path "*/.*" -type f | shuf -n 1)
 
 swww img "$selection" --transition-type any
 

@@ -15,7 +15,7 @@
 
   services.fwupd.enable = true;
 
-  boot.initrd.availableKernelModules = ["xhci_pci" "thunderbolt" "nvme"];
+  boot.initrd.availableKernelModules = ["xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod"];
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
@@ -31,7 +31,7 @@
   };
 
   swapDevices = [
-    #{device = "/dev/disk/by-uuid/6af5f1e0-74de-493d-b6a0-74ef65abdb2e";}
+    {device = "/dev/disk/by-uuid/96a91ccb-8bf2-490a-904d-5c3c8d41a26f";}
   ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -42,6 +42,5 @@
   # networking.interfaces.wlp166s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

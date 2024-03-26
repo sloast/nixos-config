@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+wallpapers="$HOME/wallpapers"
+
+curwal >> "$wallpapers/.favourites"
+
+

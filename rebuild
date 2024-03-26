@@ -1,30 +1,61 @@
 #!/bin/bash
+
+# Rebuilds the NixOS configuration
+
+# exit on error
 set -e
-pushd "$HOME/nixos-config" > /dev/null
 
-tmp=$(mktemp)
-alejandra . 1>/dev/null 2>"$tmp" || (cat "$tmp" && rm -f "$tmp" && false)
-rm -f "$tmp"
+# go to config directory
+pushd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null
 
+# stop plasma making .gtkrc-2.0
+rm "$HOME/.gtkrc-2.0" || true
+
+# format nixfiles
+if command -v alejandra &> /dev/null; then
+    tmp=$(mktemp)
+    alejandra . 1>/dev/null 2>"$tmp" || (cat "$tmp" && rm -f "$tmp" && false)
+    rm -f "$tmp"
+fi
+
+# show diff
 git add .
 git diff -U0 HEAD
 
-read -p $'\e[33mbut would you lose? (y/n): \e[0m' yn
-if [ $yn != "n" ]; then
+# confirm
+read -p $'\e[33mbut would you lose? (Y/n/(d)iff): \e[0m' yn
+
+# view diff in difftool
+if ! [[ -z "$yn" ]] && [[ "$yn" == "d" ]]; then
+    git difftool -U0 HEAD -y
+    read -p $'\e[33mcontinue? (Y/n): \e[0m' yn
+fi
+
+# exit if not confirmed
+if ! [[ -z "$yn" ]] && [[ "$yn" != "y" ]] && [[ "$yn" != "Y" ]]; then
     echo $'\e[31mthe one piece is not real :('
-    exit 0
+    exit 1
 fi
 
 echo $'\e[1m\e[96mnah, i\'d win\e[0m'
-#logfile="rebuild.log"
 
 (
     set -o pipefail
-    sudo nixos-rebuild switch --flake '.#nixos' --impure --log-format internal-json -v |& nom --json
+
+    # use nom (nixos output monitor) if available
+    if command -v nom &> /dev/null; then
+        # rebuild
+        sudo nixos-rebuild switch --flake '.#nixos' --impure --log-format internal-json -v |& nom --json
+    else
+        # initial rebuild (nom will be installed after this)
+        sudo nixos-rebuild switch --flake '.#nixos' --impure
+    fi
 )
 
+# commit
 gen=$(nix-env --list-generations | grep 'current' | sed 's/^[^0-9]*//' | sed 's/[^0-9]*$//')
 git commit -am "Generation $gen" > /dev/null
 
 echo "operation completed successfully :)"
 popd
+

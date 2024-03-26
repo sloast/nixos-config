@@ -21,7 +21,7 @@
         pkgs.writeShellScript "swww-random-wallpaper.sh" ''
           wallpapers=${config.users.users.adaad.home}/wallpapers
 
-          selection=$(ls $wallpapers | shuf -n 1)
+          selection=$(find "$wallpapers" -not -path "*/.*" -type f | shuf -n 1)
 
           ${pkgs.unstable.swww}/bin/swww img "$wallpapers/$selection" -t any
         ''
