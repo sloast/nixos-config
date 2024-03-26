@@ -15,7 +15,7 @@
     unstable.swww
 
     # status bar
-    waybar
+    unstable.waybar
 
     # notifications
     swaynotificationcenter
