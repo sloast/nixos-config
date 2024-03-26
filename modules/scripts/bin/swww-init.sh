@@ -12,5 +12,5 @@ swww query
 
 swww init
 #swww img "$HOME/wallpapers/wall_anime2_4K.png" --transition-type any
-swww-random.sh
+randomwal
 
