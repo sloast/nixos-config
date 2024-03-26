@@ -15,17 +15,17 @@ in {
       modules-left = [
         "custom/nix-logo"
         "hyprland/workspaces"
-        "hyprland/window"
         "hyprland/language"
-        "custom/media"
+        "hyprland/window"
       ];
 
       module-center = [
+        "custom/media"
+        "mpd"
       ];
 
       modules-right = [
         "tray"
-        "mpd"
         "idle_inhibitor"
         "pulseaudio"
         "network"
@@ -116,8 +116,8 @@ in {
         # "scroll-step": 1, // %, can be a float
         format = "{volume}% {icon} {format_source}";
         format-bluetooth = "{volume}% {icon} {format_source}";
-        format-bluetooth-muted = " {icon} {format_source}";
-        format-muted = " {format_source}";
+        format-bluetooth-muted = "󰝟  {format_source}";
+        format-muted = "󰝟 {format_source}";
         format-source = ""; # "{volume}% ";
         format-source-muted = "";
         format-icons = {
@@ -128,6 +128,7 @@ in {
           portable = "";
           car = "";
           default = ["" "" ""];
+          muted = "󰝟";
         };
         on-click = "pavucontrol";
       };
