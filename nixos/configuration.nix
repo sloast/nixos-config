@@ -107,19 +107,6 @@
     "text/html" = "firefox";
   };
 
-  environment.etc = {
-    "xdg/user-dirs.defaults".text = ''
-      DESKTOP=desktop
-      DOWNLOAD=downloads
-      TEMPLATES=templates
-      PUBLICSHARE=public
-      DOCUMENTS=docs
-      MUSIC=music
-      PICTURES=pictures
-      VIDEOS=videos
-    '';
-  };
-
   services = {
     pipewire = {
       enable = true;

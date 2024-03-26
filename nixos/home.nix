@@ -55,16 +55,35 @@
     ];
   };
 
-  #home.xdg.enable = true;
-  xdg.mimeApps = {
+  xdg = {
     enable = true;
-    associations.added = {
-      "x-scheme-handler/http" = ["firefox"];
-      "x-scheme-handler/https" = ["firefox"];
+
+    mimeApps = {
+      enable = true;
+      associations.added = {
+        "x-scheme-handler/http" = ["firefox"];
+        "x-scheme-handler/https" = ["firefox"];
+        "inode/directory" = ["kitty -e ranger"];
+      };
+      defaultApplications = {
+        "x-scheme-handler/http" = ["firefox"];
+        "x-scheme-handler/https" = ["firefox"];
+        "inode/directory" = ["kitty -e ranger"];
+      };
     };
-    defaultApplications = {
-      "x-scheme-handler/http" = ["firefox"];
-      "x-scheme-handler/https" = ["firefox"];
+
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+
+      desktop = "desktop";
+      documents = "documents";
+      download = "downloads";
+      music = "music";
+      pictures = "pictures";
+      publicShare = "public";
+      templates = "templates";
+      videos = "videos";
     };
   };
 
