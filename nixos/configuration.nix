@@ -107,6 +107,8 @@
     "text/html" = "firefox";
   };
 
+  programs.nix-ld.enable = true;
+
   services = {
     pipewire = {
       enable = true;
