@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-imgpath=$(curwal)
+if [[ -z $1 ]]; then
+    imgpath=$(curwal)
+else
+    imgpath=$1
+fi
+
 
 if [[ $imgpath == /nix/store/* ]]; then
     echo "Cannot remove wallpapers from the nix store."
