@@ -10,6 +10,12 @@
     enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
 
+    defaultKeymap = "viins";
+
+    initExtra = ''
+      zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+    '';
+
     shellAliases = {
       ls = "lsd";
       ll = "lsd -l";

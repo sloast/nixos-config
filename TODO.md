@@ -8,5 +8,4 @@
 - setup noti
 - setup swayidle
 - fix brightness file perms
-- fix nvim .md conf
 
