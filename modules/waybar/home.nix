@@ -40,6 +40,20 @@ in {
         "clock"
       ];
 
+      "hyprland/workspaces" = {
+        format = "{icon} {name}";
+        format-icons = {
+          "1" = " ";
+          "2" = "󰈹 ";
+          "3" = " ";
+          "4" = "󰓇 ";
+          "5" = "󰙯 ";
+          urgent = " ";
+          active = " ";
+          default = " ";
+        };
+      };
+
       "custom/nix-logo" = {
         format = " NixOS";
         #on-click = "${pkgs.wofi}/bin/wofi --show drun";
