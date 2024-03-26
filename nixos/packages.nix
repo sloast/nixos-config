@@ -39,8 +39,7 @@
 
     # terminals (for testing)
     alacritty
-    st
-    termite
+    kitty
     wezterm
     #warp-terminal
     foot
