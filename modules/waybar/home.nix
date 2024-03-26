@@ -41,7 +41,7 @@ in {
       ];
 
       "hyprland/workspaces" = {
-        format = "{icon} {name}";
+        format = "{icon}{name}";
         format-icons = {
           "1" = " ";
           "2" = "󰈹 ";
@@ -95,7 +95,7 @@ in {
       };
 
       "cpu" = {
-        format = "  {usage}%";
+        format = " {usage}%";
       };
 
       "memory" = {
@@ -104,11 +104,11 @@ in {
 
       "temperature" = {
         critical-threshold = 80;
-        format = "  {temperatureC}°C";
+        format = " {temperatureC}°C";
       };
 
       "backlight" = {
-        format = "{icon}  {percent}%";
+        format = "{icon} {percent}%";
         format-icons = ["" "" "" "" "" "" "" "" ""];
       };
 
