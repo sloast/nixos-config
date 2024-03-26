@@ -74,6 +74,7 @@ restoregtkrc
 gen=$(nix-env --list-generations | grep 'current' | sed 's/^[^0-9]*//' | sed 's/[^0-9]*$//')
 git commit -am "Generation $gen" > /dev/null
 
-echo "operation completed successfully :)"
-popd
+echo -e "\033[32m\033[1moperation completed successfully :)\033[0m"
+
+popd &> /dev/null
 
