@@ -17,6 +17,9 @@
     # status bar
     waybar
 
+    # notifications
+    swaynotificationcenter
+
     # clipboard support
     wl-clipboard
 
