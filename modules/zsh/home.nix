@@ -14,6 +14,7 @@
       ls = "lsd";
       ll = "lsd -l";
       l = "lsd -Al";
+      lr = "lsd -R";
       ncat = "nvim -R";
       cls = "clear";
       cleanup = "sudo nix-collect-garbage -d";
@@ -23,6 +24,7 @@
       tp = "trash-put";
       tl = "trash-list";
       nixdev = "nix develop -c $SHELL";
+      nvimdiff = "git difftool -y";
     };
 
     oh-my-zsh = {
