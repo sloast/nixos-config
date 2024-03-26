@@ -8,9 +8,6 @@ set -e
 # go to config directory
 pushd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null
 
-# stop plasma making .gtkrc-2.0
-rm "$HOME/.gtkrc-2.0" || true
-
 # format nixfiles
 if command -v alejandra &> /dev/null; then
     tmp=$(mktemp)
@@ -38,6 +35,9 @@ if ! [[ -z "$yn" ]] && [[ "$yn" != "y" ]] && [[ "$yn" != "Y" ]]; then
 fi
 
 echo $'\e[1m\e[96mnah, i\'d win\e[0m'
+
+# stop plasma making .gtkrc-2.0
+rm -f "$HOME/.gtkrc-2.0"
 
 (
     set -o pipefail
