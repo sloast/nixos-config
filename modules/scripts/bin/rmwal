@@ -24,5 +24,7 @@ mv "$imgpath" "$newpath"
 
 echo "Removed $(basename $imgpath) from rotation."
 
-randomwal
+if [[ -z $1 ]]; then
+    randomwal
+fi
 
