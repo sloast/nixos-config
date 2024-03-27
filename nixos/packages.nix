@@ -73,6 +73,7 @@
     unstable.obsidian
     gparted
     gimp
+    calibre
 
     # audio
     pipewire
@@ -121,4 +122,11 @@
           '';
       }))
   ];
+
+  services.flatpak = {
+    enable = true;
+    packages = [
+      "org.jdownloader.JDownloader"
+    ];
+  };
 }

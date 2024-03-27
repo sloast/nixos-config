@@ -121,10 +121,6 @@
       jack.enable = true;
       wireplumber.enable = true;
     };
-    flatpak = {
-      enable = false;
-      packages = [];
-    };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
