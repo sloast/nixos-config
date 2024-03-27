@@ -9,6 +9,7 @@
     unzip
     curl
     wget
+    file
 
     # improved tools
     ripgrep
