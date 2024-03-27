@@ -71,6 +71,7 @@
     imv
     unstable.obsidian
     gparted
+    gimp
 
     # audio
     pipewire
