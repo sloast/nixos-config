@@ -109,6 +109,8 @@
 
   #programs.nix-ld.enable = true;
 
+  powerManagement.enable = true;
+
   services = {
     pipewire = {
       enable = true;
@@ -120,6 +122,21 @@
       };
       jack.enable = true;
       wireplumber.enable = true;
+    };
+
+    thermald.enable = true;
+    auto-cpufreq = {
+      enable = true;
+      settings = {
+        battery = {
+          governor = "powersave";
+          turbo = "never";
+        };
+        charger = {
+          governor = "performance";
+          turbo = "auto";
+        };
+      };
     };
   };
 
