@@ -7,7 +7,36 @@ if [ ! -d $wallpapers ]; then
     exit 1
 fi
 
-selection=$(find "$wallpapers" -not -path "*/.*" -type f | shuf -n 1)
+pushd $wallpapers > /dev/null
 
-swww img "$selection" --transition-type any
+statedir="$HOME/.local/state/randomwal"
+lastfind="$statedir/lastfind"
+queue="$statedir/queue"
+
+if [ ! -d $statedir ]; then
+    mkdir -p $statedir
+fi
+
+find_wal() {
+    find "$wallpapers" -not -path "*/.*" -type f
+}
+
+
+if [ ! -f $lastfind ] || ! diff $lastfind <(find_wal) || [ ! -s $queue ]; then
+    find_wal > $lastfind
+    shuf $lastfind > $queue
+fi
+
+nextwallpaper=$(head -n 1 $queue)
+sed -i '1d' $queue
+
+curwal_relpath=$(realpath --relative-to="$wallpapers" "$(curwal)")
+if [ "$curwal_relpath" = "$nextwallpaper" ]; then
+    nextwallpaper=$(head -n 1 $queue)
+    sed -i '1d' $queue
+fi
+
+swww img "$nextwallpaper" --transition-type any
+
+popd > /dev/null
 
