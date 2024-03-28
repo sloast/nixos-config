@@ -30,8 +30,9 @@ fi
 nextwallpaper=$(head -n 1 $queue)
 sed -i '1d' $queue
 
-curwal_relpath=$(realpath --relative-to="$wallpapers" "$(curwal)")
-if [ "$curwal_relpath" = "$nextwallpaper" ]; then
+curwal_realpath=$(realpath "$(curwal)")
+next_realpath=$(realpath "$nextwallpaper")
+if [ "$curwal_realpath" = "$next_realpath" ]; then
     nextwallpaper=$(head -n 1 $queue)
     sed -i '1d' $queue
 fi

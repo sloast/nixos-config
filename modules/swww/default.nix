@@ -16,14 +16,37 @@
   systemd.user.services."random-wallpaper" = {
     serviceConfig = {
       Type = "oneshot";
-      #User = "adaad";
       ExecStart = toString (
         pkgs.writeShellScript "swww-random-wallpaper.sh" ''
           wallpapers=${config.users.users.adaad.home}/wallpapers
 
-          selection=$(find "$wallpapers" -not -path "*/.*" -type f | shuf -n 1)
+          if [ ! -d $wallpapers ]; then
+              echo "No wallpapers directory found at $wallpapers"
+              exit 1
+          fi
 
-          ${pkgs.unstable.swww}/bin/swww img "$wallpapers/$selection" -t any
+          statedir="${config.users.users.adaad.home}/.local/state/randomwal"
+          lastfind="$statedir/lastfind"
+          queue="$statedir/queue"
+
+          if [ ! -d $statedir ]; then
+              mkdir -p $statedir
+          fi
+
+          find_wal() {
+              find "$wallpapers" -not -path "*/.*" -type f
+          }
+
+
+          if [ ! -s $queue ]; then
+              find_wal > $lastfind
+              shuf $lastfind > $queue
+          fi
+
+          nextwallpaper=$(head -n 1 $queue)
+          sed -i '1d' $queue
+
+          ${pkgs.unstable.swww}/bin/swww img "$nextwallpaper" --transition-type any
         ''
       );
     };
