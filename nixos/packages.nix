@@ -23,8 +23,7 @@
     unstable.btop
     tldr
     trash-cli
-
-    ueberzug
+    du-dust
 
     # currently unused
     noti
@@ -36,7 +35,7 @@
     #blesh
     #byobu # why not use wm?
     delta
-    du-dust
+    ueberzug
 
     # terminals (for testing)
     alacritty
@@ -64,7 +63,6 @@
     # desktop apps
     burpsuite
     unstable.vesktop
-    firefox-wayland
     libsForQt5.kdenlive
     vscode
     #jetbrains.idea-community
@@ -74,6 +72,11 @@
     gparted
     gimp
     calibre
+
+    # browsers
+    firefox-wayland
+    qutebrowser
+    nyxt
 
     # audio
     pipewire
