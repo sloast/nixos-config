@@ -64,19 +64,24 @@
     burpsuite
     unstable.vesktop
     libsForQt5.kdenlive
-    vscode
-    #jetbrains.idea-community
-    #spotify
-    imv
     unstable.obsidian
-    gparted
+    vscode
     gimp
     calibre
+
+    # desktop utils
+    imv
+    gparted
+    speedcrunch
 
     # browsers
     firefox-wayland
     qutebrowser
     nyxt
+
+    # unused
+    #jetbrains.idea-community
+    #spotify
 
     # audio
     pipewire
