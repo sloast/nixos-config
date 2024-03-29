@@ -49,7 +49,7 @@ in {
           "4" = "󰓇 ";
           "5" = "󰙯 ";
           urgent = " ";
-          active = " ";
+          #active = " ";
           default = " ";
         };
       };
