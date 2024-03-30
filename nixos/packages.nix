@@ -65,7 +65,7 @@
     unstable.vesktop
     libsForQt5.kdenlive
     unstable.obsidian
-    vscode
+    unstable.vscode
     gimp
     calibre
 
