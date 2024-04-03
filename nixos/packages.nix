@@ -52,6 +52,7 @@
     nodePackages.vim-language-server
     universal-ctags
     unstable.neovide
+    lazygit
 
     # Development
     gcc
@@ -81,6 +82,8 @@
     firefox-wayland
     qutebrowser
     nyxt
+
+    qtchan
 
     # unused
     #jetbrains.idea-community
