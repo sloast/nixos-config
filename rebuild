@@ -79,3 +79,5 @@ git commit -am "Generation $gen" > /dev/null
 
 popd &> /dev/null
 
+noti -t "nixos-rebuild switch"
+

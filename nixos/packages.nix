@@ -69,6 +69,9 @@
     gimp
     calibre
 
+    steam
+    steam-run
+
     # desktop utils
     imv
     gparted
