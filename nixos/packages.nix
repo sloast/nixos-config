@@ -140,7 +140,7 @@
   services.flatpak = {
     enable = true;
     packages = [
-      "org.jdownloader.JDownloader"
+      #"org.jdownloader.JDownloader"
     ];
   };
 }
