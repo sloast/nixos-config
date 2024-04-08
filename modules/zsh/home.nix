@@ -14,7 +14,6 @@
 
     initExtra = ''
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-      bindkey -v
     '';
 
     shellAliases = {
@@ -46,6 +45,7 @@
         "node"
         "rust"
         "deno"
+        "zsh-abbr"
       ];
     };
   };

@@ -2,4 +2,4 @@
 rebuild.log
 ignore
 *.bak
-.*
+.original

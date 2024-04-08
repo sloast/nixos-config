@@ -17,7 +17,7 @@ fi
 
 # show diff
 git add .
-git diff -U0 HEAD
+git diff -U0 HEAD || true
 
 # confirm
 read -p $'\n\e[33mbut would you lose? (Y/n/(d)iff): \e[0m' yn
