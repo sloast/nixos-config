@@ -37,7 +37,11 @@ if [ "$curwal_realpath" = "$next_realpath" ]; then
     sed -i '1d' $queue
 fi
 
-swww img "$nextwallpaper" --transition-type any
+if [ -z "$1" ] ; then
+    swww img "$nextwallpaper" --transition-type any
+else
+    echo $(realpath "$nextwallpaper")
+fi
 
 popd > /dev/null
 

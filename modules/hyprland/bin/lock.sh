@@ -31,7 +31,8 @@ else
 fi
 
 # blur screenshot
-ffmpeg -i screen.jpg -vf "[in] gblur=sigma=$blur [a] ; [a] eq=saturation=1.5 [out]" logo-ed_screen.png
+ffmpeg -i $(curwal) -vf "[in] gblur=sigma=$blur [out]" blurred_screen.png
+#ffmpeg -i $(randomwal -) -vf "[in] gblur=sigma=$blur [a] ; [a] eq=saturation=1.5 [out]" blurred_screen.png
 
 
 #ffmpeg -i screen.jpg -vf \
@@ -67,7 +68,7 @@ color14='#E7E1D7'
 color15='#dedeef'
 
 swaylock \
-  --image "logo-ed_screen.png" \
+  --image "blurred_screen.png" \
   --daemonize \
   --indicator-radius 160 \
   --indicator-thickness 20 \
