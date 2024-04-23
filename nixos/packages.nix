@@ -60,6 +60,9 @@
     nodejs
     rustup
     openjdk
+    perl
+    perlnavigator
+    go
 
     # desktop apps
     burpsuite
