@@ -140,10 +140,10 @@
       }))
   ];
 
-  services.flatpak = {
-    enable = true;
-    packages = [
-      #"org.jdownloader.JDownloader"
-    ];
-  };
+  #  services.flatpak = {
+  #    enable = true;
+  #    packages = [
+  #      #"org.jdownloader.JDownloader"
+  #    ];
+  #  };
 }
